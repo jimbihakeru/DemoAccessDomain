@@ -62,7 +62,7 @@ public class GetRequestAutomation {
 		for (String x : network) {
 			if (x.equals("fpt")) {
 				System.out.println(x);
-				wifi.switchToSpecificNetwork("INFINIY_506", "i28unit#506");
+				wifi.switchToSpecificNetwork("INFINITY28-603", "i28unit#603");
 				try {
 					Thread.sleep(10000);
 				} catch (InterruptedException e) {
@@ -71,7 +71,7 @@ public class GetRequestAutomation {
 				}
 			} else if (x.equals("vnpt")) {
 				System.out.println(x);
-				wifi.switchToSpecificNetwork("PPCloud", "wifikhongpass");
+				wifi.switchToSpecificNetwork("INFINITY_503", "i28unit#503");
 				try {
 					Thread.sleep(10000);
 				} catch (InterruptedException e) {
