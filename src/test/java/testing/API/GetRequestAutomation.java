@@ -58,7 +58,7 @@ public class GetRequestAutomation {
 	@SuppressWarnings("deprecation")
 	@Test
 	public void ApiTesting() throws IOException {
-		String network[] = { "fpt", "vnpt", "viettel", "4G-mobi", "4G-viettel", "4G-vina" };
+		String network[] = { "fpt", "vnpt", "viettel"};
 		for (String x : network) {
 			if (x.equals("fpt")) {
 				System.out.println(x);
