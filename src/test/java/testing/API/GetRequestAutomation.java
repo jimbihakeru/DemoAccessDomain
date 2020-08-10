@@ -58,11 +58,11 @@ public class GetRequestAutomation {
 	@SuppressWarnings("deprecation")
 	@Test
 	public void ApiTesting() throws IOException {
-		String network[] = { "fpt", "vnpt" };
+		String network[] = { "fpt", "vnpt", "viettel", "4G-mobi", "4G-viettel", "4G-vina" };
 		for (String x : network) {
 			if (x.equals("fpt")) {
 				System.out.println(x);
-				wifi.switchToSpecificNetwork("INFINITY28-603", "i28unit#603");
+				wifi.switchToSpecificNetwork("FPT", "");
 				try {
 					Thread.sleep(10000);
 				} catch (InterruptedException e) {
@@ -71,15 +71,49 @@ public class GetRequestAutomation {
 				}
 			} else if (x.equals("vnpt")) {
 				System.out.println(x);
-				wifi.switchToSpecificNetwork("INFINITY_503", "i28unit#503");
+				wifi.switchToSpecificNetwork("Long Quang", "");
 				try {
 					Thread.sleep(10000);
 				} catch (InterruptedException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
-			} else {
+			} else if (x.equals("viettel")) {
 				System.out.println(x);
+				wifi.switchToSpecificNetwork("Viettel", "");
+				try {
+					Thread.sleep(10000);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			} else if (x.equals("4G-mobi")) {
+				System.out.println(x);
+				wifi.switchToSpecificNetwork("TP-Link_Mobi", "");
+				try {
+					Thread.sleep(10000);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			} else if (x.equals("4G-viettel")) {
+				System.out.println(x);
+				wifi.switchToSpecificNetwork("TP-Link_Viettel", "");
+				try {
+					Thread.sleep(10000);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			} else if (x.equals("4G-vina")) {
+				System.out.println(x);
+				wifi.switchToSpecificNetwork("TP-Link_Vina", "");
+				try {
+					Thread.sleep(10000);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 			}
 
 			prop = new Properties();
