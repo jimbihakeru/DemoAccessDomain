@@ -12,7 +12,7 @@ public class switchnetwork {
 		if (osName.contains("mac")) {
 			cmd = "networksetup -setairportnetwork en0" + " " + networkName + " " + networkPass;
 		} else {
-			cmd = "netsh wlan connect ssid=" + networkName + " name=" + networkName;
+			cmd = "netsh wlan connect ssid=\"" + networkName + "\"" + " name=\"" + networkName + "\"";
 		}
 		try {
 			Process process = Runtime.getRuntime().exec(cmd);
