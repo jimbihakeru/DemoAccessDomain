@@ -57,7 +57,7 @@ public class GetRequestAutomation {
 
 	@SuppressWarnings("deprecation")
 	@Test
-	public void ApiTesting() throws IOException {
+	public void ApiTesting() throws IOException, InterruptedException {
 		String network[] = { "fpt", "vnpt", "viettel"};
 		for (String x : network) {
 			if (x.equals("fpt")) {
