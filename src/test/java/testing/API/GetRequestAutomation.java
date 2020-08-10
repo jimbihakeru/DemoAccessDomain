@@ -90,7 +90,8 @@ public class GetRequestAutomation {
 					e.printStackTrace();
 					System.out.println("KHÔNG KẾT NỐI ĐƯỢC MẠNG " + x);
 				}
-			} else if (x.equals("4G-mobi")) {
+			} 
+			/* else if (x.equals("4G-mobi")) {
 				System.out.println(x);
 				wifi.switchToSpecificNetwork("TP-Link_Mobi", "");
 				try {
@@ -120,7 +121,7 @@ public class GetRequestAutomation {
 					e.printStackTrace();
 					System.out.println("KHÔNG KẾT NỐI ĐƯỢC MẠNG " + x);
 				}
-			}
+			} */
 
 			prop = new Properties();
 			FileInputStream fis = new FileInputStream("src/main/java//configs/URL.properties");
