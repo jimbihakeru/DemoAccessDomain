@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class switchnetwork {
-	public void switchToSpecificNetwork(String networkName, String networkPass) {
+	public void switchToSpecificNetwork(String networkName, String networkPass) throws InterruptedException {
 
 		String osName = System.getProperty("os.name").toLowerCase();
 		String cmd;
@@ -16,6 +16,7 @@ public class switchnetwork {
 		}
 		try {
 			Process process = Runtime.getRuntime().exec(cmd);
+			process.waitFor();
 			System.out.println("the output stream is " + process.getOutputStream());
 			BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()));
 			String s;
