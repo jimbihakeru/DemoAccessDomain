@@ -68,6 +68,7 @@ public class GetRequestAutomation {
 				} catch (InterruptedException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
+					System.out.println("KHÔNG KẾT NỐI ĐƯỢC MẠNG " + x);
 				}
 			} else if (x.equals("vnpt")) {
 				System.out.println(x);
@@ -77,6 +78,7 @@ public class GetRequestAutomation {
 				} catch (InterruptedException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
+					System.out.println("KHÔNG KẾT NỐI ĐƯỢC MẠNG " + x);
 				}
 			} else if (x.equals("viettel")) {
 				System.out.println(x);
@@ -86,6 +88,7 @@ public class GetRequestAutomation {
 				} catch (InterruptedException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
+					System.out.println("KHÔNG KẾT NỐI ĐƯỢC MẠNG " + x);
 				}
 			} else if (x.equals("4G-mobi")) {
 				System.out.println(x);
@@ -95,6 +98,7 @@ public class GetRequestAutomation {
 				} catch (InterruptedException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
+					System.out.println("KHÔNG KẾT NỐI ĐƯỢC MẠNG " + x);
 				}
 			} else if (x.equals("4G-viettel")) {
 				System.out.println(x);
@@ -104,6 +108,7 @@ public class GetRequestAutomation {
 				} catch (InterruptedException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
+					System.out.println("KHÔNG KẾT NỐI ĐƯỢC MẠNG " + x);
 				}
 			} else if (x.equals("4G-vina")) {
 				System.out.println(x);
@@ -113,6 +118,7 @@ public class GetRequestAutomation {
 				} catch (InterruptedException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
+					System.out.println("KHÔNG KẾT NỐI ĐƯỢC MẠNG " + x);
 				}
 			}
 
