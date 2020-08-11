@@ -65,30 +65,30 @@ public class GetRequestAutomation {
 				wifi.switchToSpecificNetwork("FPT", "");
 				try {
 					Thread.sleep(10000);
+					wifi.CheckConnectSuccess("FPT", "");
 				} catch (InterruptedException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
-					System.out.println("KHÔNG KẾT NỐI ĐƯỢC MẠNG " + x);
 				}
 			} else if (x.equals("vnpt")) {
 				System.out.println(x);
 				wifi.switchToSpecificNetwork("Long Quang", "");
 				try {
 					Thread.sleep(10000);
+					wifi.CheckConnectSuccess("Long Quang", "");
 				} catch (InterruptedException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
-					System.out.println("KHÔNG KẾT NỐI ĐƯỢC MẠNG " + x);
 				}
 			} else if (x.equals("viettel")) {
 				System.out.println(x);
 				wifi.switchToSpecificNetwork("Viettel", "");
 				try {
 					Thread.sleep(10000);
+					wifi.CheckConnectSuccess("Viettel", "");
 				} catch (InterruptedException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
-					System.out.println("KHÔNG KẾT NỐI ĐƯỢC MẠNG " + x);
 				}
 			} 
 			/* else if (x.equals("4G-mobi")) {
