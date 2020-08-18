@@ -3,12 +3,14 @@ package testing.API;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.seleniumhq.jetty9.util.log.Log;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
@@ -32,7 +34,7 @@ public class GetRequestAutomation {
 	public ExtentTest test;
 	Log log;
 
-//	WebDriverWait wait=new WebDriverWait(driver, 10);
+	WebDriverWait wait=new WebDriverWait(driver, 10);
 	notifyBot bot = new notifyBot();
 	switchnetwork wifi = new switchnetwork();
 	Actions action = new Actions();
@@ -113,9 +115,10 @@ public class GetRequestAutomation {
 			for (int i = 1; i <= prop.size(); i++) {
 				driver = new ChromeDriver(cap);
 				driver.manage().window().maximize();
-//				driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+				driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 				String url = prop.getProperty("url" + i);
 				driver.get(url);
+				wait.wait(3000);
 //				action.checkPageIsReady();
 				test = extent.createTest(url);
 				if (driver.findElements(By.xpath(IDElement)).size() != 0) {
