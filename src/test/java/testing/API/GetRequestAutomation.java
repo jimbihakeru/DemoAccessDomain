@@ -118,7 +118,7 @@ public class GetRequestAutomation {
 //				driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 				String url = prop.getProperty("url" + i);
 				driver.get(url);
-
+				Thread.sleep(3000);
 				test = extent.createTest(url);
 				if (driver.findElements(By.xpath(IDElement)).size() != 0) {
 					test.log(Status.PASS, url + "----- Access OK");
