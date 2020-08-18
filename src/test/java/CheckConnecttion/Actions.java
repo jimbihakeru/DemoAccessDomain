@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 
 public class Actions {
 
-	public static WebDriver driver;
+	public WebDriver driver;
 
 	public void checkPageIsReady() {
 
