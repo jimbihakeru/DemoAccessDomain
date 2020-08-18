@@ -154,10 +154,10 @@
 					<version>2.19.1</version>
 					<configuration>
 						<testFailureIgnore>true</testFailureIgnore>
-               <suiteXmlFiles>
-              <suiteXmlFile>testng.xml</suiteXmlFile>
-               </suiteXmlFiles>
-            </configuration>
+						<suiteXmlFiles>
+							<suiteXmlFile>testng.xml</suiteXmlFile>
+						</suiteXmlFiles>
+					</configuration>
 				</plugin>
 				<plugin>
 					<artifactId>maven-jar-plugin</artifactId>
