@@ -157,7 +157,6 @@ public class GetRequestAutomation {
 			if (js.executeScript("return document.readyState").toString().equals("complete")) {
 				break;
 			}
-			bot.sendMsg("the page could not be loaded.....");
 		}
 		
 	}
