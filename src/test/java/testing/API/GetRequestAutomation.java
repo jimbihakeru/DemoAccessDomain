@@ -65,7 +65,7 @@ public class GetRequestAutomation {
 				System.out.println(x);
 				wifi.switchToSpecificNetwork("FPT", "");
 				try {
-					Thread.sleep(20000);
+					Thread.sleep(25000);
 					wifi.CheckConnectSuccess("FPT", "");
 				} catch (InterruptedException e) {
 					// TODO Auto-generated catch block
@@ -75,7 +75,7 @@ public class GetRequestAutomation {
 				System.out.println(x);
 				wifi.switchToSpecificNetwork("Long Quang", "");
 				try {
-					Thread.sleep(20000);
+					Thread.sleep(25000);
 					wifi.CheckConnectSuccess("Long Quang", "");
 				} catch (InterruptedException e) {
 					// TODO Auto-generated catch block
@@ -85,7 +85,7 @@ public class GetRequestAutomation {
 				System.out.println(x);
 				wifi.switchToSpecificNetwork("Viettel", "");
 				try {
-					Thread.sleep(20000);
+					Thread.sleep(25000);
 					wifi.CheckConnectSuccess("Viettel", "");
 				} catch (InterruptedException e) {
 					// TODO Auto-generated catch block
@@ -111,10 +111,8 @@ public class GetRequestAutomation {
 			for (int i = 1; i <= prop.size(); i++) {
 				driver = new ChromeDriver(cap);
 				driver.manage().window().maximize();
-//				driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 				String url = prop.getProperty("url" + i);
 				driver.get(url);
-//				Thread.sleep(3000);
 				checkPageIsReady();
 				test = extent.createTest(url);
 				if (driver.findElements(By.xpath(IDElement)).size() != 0) {
@@ -160,6 +158,7 @@ public class GetRequestAutomation {
 				break;
 			}
 		}
+		bot.sendMsg("the page could not be loaded.....");
 	}
 
 }
