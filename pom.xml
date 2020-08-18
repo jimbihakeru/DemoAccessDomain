@@ -24,7 +24,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.compiler.source>1.7</maven.compiler.source>
 		<maven.compiler.target>1.7</maven.compiler.target>
-		<testng.version>7.1.0</testng.version>
+		<testng.version>6.14.3</testng.version>
 		<restassured.version>4.3.1</restassured.version>
 	</properties>
 
@@ -69,11 +69,11 @@
 		</dependency>
 
 		<!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
-		<dependency>
+<!-- 		<dependency>
 			<groupId>com.aventstack</groupId>
 			<artifactId>extentreports</artifactId>
 			<version>4.1.7</version>
-		</dependency>
+		</dependency> -->
 
 		<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
 		<dependency>
@@ -151,13 +151,13 @@
 				</plugin>
 				<plugin>
 					<artifactId>maven-surefire-plugin</artifactId>
-					<version>3.0.0-M1</version>
+					<version>2.19.1</version>
 					<configuration>
-						<testFailureIgnore>true</testFailureIgnore>
 						<suiteXmlFiles>
 							<suiteXmlFile>testng.xml</suiteXmlFile>
 						</suiteXmlFiles>
 					</configuration>
+					
 				</plugin>
 				<plugin>
 					<artifactId>maven-jar-plugin</artifactId>

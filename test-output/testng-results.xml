@@ -1,25 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="0" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Main Test Suite" duration-ms="165322" started-at="2020-08-01T17:47:18 ICT" finished-at="2020-08-01T17:50:03 ICT">
+  <suite name="Main Test Suite" duration-ms="8" started-at="2020-08-18T22:16:34 ICT" finished-at="2020-08-18T22:16:34 ICT">
     <groups>
     </groups>
-    <test name="TestNG Test Group" duration-ms="165322" started-at="2020-08-01T17:47:18 ICT" finished-at="2020-08-01T17:50:03 ICT">
-      <class name="testing.API.GetRequestAutomation">
-        <test-method status="PASS" signature="setExtent()[pri:0, instance:testing.API.GetRequestAutomation@782859e]" name="setExtent" is-config="true" duration-ms="50" started-at="2020-08-01T17:47:18 ICT" finished-at="2020-08-01T17:47:18 ICT">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setExtent -->
-        <test-method status="PASS" signature="ApiTesting()[pri:0, instance:testing.API.GetRequestAutomation@782859e]" name="ApiTesting" duration-ms="165009" started-at="2020-08-01T17:47:18 ICT" finished-at="2020-08-01T17:50:03 ICT">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ApiTesting -->
-        <test-method status="PASS" signature="endReport()[pri:0, instance:testing.API.GetRequestAutomation@782859e]" name="endReport" is-config="true" duration-ms="245" started-at="2020-08-01T17:50:03 ICT" finished-at="2020-08-01T17:50:03 ICT">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- endReport -->
-      </class> <!-- testing.API.GetRequestAutomation -->
+    <test name="TestNG Test Group" duration-ms="8" started-at="2020-08-18T22:16:34 ICT" finished-at="2020-08-18T22:16:34 ICT">
     </test> <!-- TestNG Test Group -->
   </suite> <!-- Main Test Suite -->
 </testng-results>

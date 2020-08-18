@@ -21,19 +21,20 @@ import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 
+import CheckConnecttion.Actions;
 import SwitchNetwork.switchnetwork;
 import telegrambots.notifyBot;
 
 public class GetRequestAutomation {
 
-	public static WebDriver driver;
+	public WebDriver driver;
 	public static Properties prop;
 	public ExtentReports extent;
 	public static ExtentHtmlReporter htmlReporter;
 	public ExtentTest test;
 	Log log;
 
-	WebDriverWait wait=new WebDriverWait(driver, 10);
+//	WebDriverWait wait=new WebDriverWait(driver, 10);
 	notifyBot bot = new notifyBot();
 	switchnetwork wifi = new switchnetwork();
 	Actions action = new Actions();
@@ -95,37 +96,6 @@ public class GetRequestAutomation {
 					e.printStackTrace();
 				}
 			} 
-			/* else if (x.equals("4G-mobi")) {
-				System.out.println(x);
-				wifi.switchToSpecificNetwork("TP-Link_Mobi", "");
-				try {
-					Thread.sleep(10000);
-				} catch (InterruptedException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-					System.out.println("KHÔNG KẾT NỐI ĐƯỢC MẠNG " + x);
-				}
-			} else if (x.equals("4G-viettel")) {
-				System.out.println(x);
-				wifi.switchToSpecificNetwork("TP-Link_Viettel", "");
-				try {
-					Thread.sleep(10000);
-				} catch (InterruptedException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-					System.out.println("KHÔNG KẾT NỐI ĐƯỢC MẠNG " + x);
-				}
-			} else if (x.equals("4G-vina")) {
-				System.out.println(x);
-				wifi.switchToSpecificNetwork("TP-Link_Vina", "");
-				try {
-					Thread.sleep(10000);
-				} catch (InterruptedException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-					System.out.println("KHÔNG KẾT NỐI ĐƯỢC MẠNG " + x);
-				}
-			} */
 
 			prop = new Properties();
 			FileInputStream fis = new FileInputStream("src/main/java//configs/URL.properties");
@@ -145,7 +115,7 @@ public class GetRequestAutomation {
 			for (int i = 1; i <= prop.size(); i++) {
 				driver = new ChromeDriver(cap);
 				driver.manage().window().maximize();
-				driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+//				driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 				String url = prop.getProperty("url" + i);
 				driver.get(url);
 				action.checkPageIsReady();

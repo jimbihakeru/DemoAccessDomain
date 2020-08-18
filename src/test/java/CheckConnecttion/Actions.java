@@ -1,11 +1,11 @@
-package testing.API;
+package CheckConnecttion;
 
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 
 public class Actions {
 
-	public WebDriver driver;
+	public static WebDriver driver;
 
 	public void checkPageIsReady() {
 
