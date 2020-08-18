@@ -6,6 +6,7 @@ import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -22,7 +23,6 @@ import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 
-import CheckConnecttion.Actions;
 import SwitchNetwork.switchnetwork;
 import telegrambots.notifyBot;
 
@@ -37,7 +37,6 @@ public class GetRequestAutomation {
 
 	notifyBot bot = new notifyBot();
 	switchnetwork wifi = new switchnetwork();
-	Actions action = new Actions();
 
 	public String IDElement = "//*[@id='footer' or @id='header']";
 	public String ClassElement = "//*[@class='header' or @class='header-custom' or @class='footer footer-custom']";
@@ -118,7 +117,8 @@ public class GetRequestAutomation {
 //				driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 				String url = prop.getProperty("url" + i);
 				driver.get(url);
-				Thread.sleep(3000);
+//				Thread.sleep(3000);
+				checkPageIsReady();
 				test = extent.createTest(url);
 				if (driver.findElements(By.xpath(IDElement)).size() != 0) {
 					test.log(Status.PASS, url + "----- Access OK");
@@ -138,6 +138,31 @@ public class GetRequestAutomation {
 			wifi.ClearCacheDNS();
 		}
 
+	}
+	public void checkPageIsReady() {
+
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+
+		// Initially bellow given if condition will check ready state of page.
+		if (js.executeScript("return document.readyState").toString().equals("complete")) {
+			System.out.println("Page Is loaded.");
+			return;
+		}
+
+		// This loop will iterate for 25 times to check If page Is ready after
+		// every 1 second.
+		// If the page loaded successfully, it will terminate the for loop
+		for (int i = 0; i < 25; i++) {
+			try {
+				Thread.sleep(1000);
+			} catch (InterruptedException e) {
+			}
+
+			// To check page ready state.
+			if (js.executeScript("return document.readyState").toString().equals("complete")) {
+				break;
+			}
+		}
 	}
 
 }
