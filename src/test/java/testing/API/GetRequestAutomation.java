@@ -116,7 +116,7 @@ public class GetRequestAutomation {
 			for (int i = 1; i <= prop.size(); i++) {
 				driver = new ChromeDriver(cap);
 				driver.manage().window().maximize();
-				driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+//				driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 				String url = prop.getProperty("url" + i);
 				driver.get(url);
 				wait.wait(3000);
