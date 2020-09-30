@@ -65,7 +65,7 @@ public class GetRequestAutomation {
 				System.out.println(x);
 				wifi.switchToSpecificNetwork("FPT", "");
 				try {
-					Thread.sleep(25000);
+					Thread.sleep(30000);
 					wifi.CheckConnectSuccess("FPT", "");
 				} catch (InterruptedException e) {
 					// TODO Auto-generated catch block
@@ -75,7 +75,7 @@ public class GetRequestAutomation {
 				System.out.println(x);
 				wifi.switchToSpecificNetwork("Long Quang", "");
 				try {
-					Thread.sleep(25000);
+					Thread.sleep(30000);
 					wifi.CheckConnectSuccess("Long Quang", "");
 				} catch (InterruptedException e) {
 					// TODO Auto-generated catch block
@@ -85,7 +85,7 @@ public class GetRequestAutomation {
 				System.out.println(x);
 				wifi.switchToSpecificNetwork("Viettel", "");
 				try {
-					Thread.sleep(25000);
+					Thread.sleep(30000);
 					wifi.CheckConnectSuccess("Viettel", "");
 				} catch (InterruptedException e) {
 					// TODO Auto-generated catch block
