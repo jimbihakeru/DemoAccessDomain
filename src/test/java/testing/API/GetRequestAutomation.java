@@ -59,7 +59,7 @@ public class GetRequestAutomation {
 	@SuppressWarnings("deprecation")
 	@Test
 	public void ApiTesting() throws IOException, InterruptedException {
-		String network[] = { "fpt", "vnpt", "viettel"};
+		String network[] = { "fpt", "vnpt", "Viettel"};
 		for (String x : network) {
 			if (x.equals("fpt")) {
 				System.out.println(x);
@@ -81,7 +81,7 @@ public class GetRequestAutomation {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
-			} else if (x.equals("viettel")) {
+			} else if (x.equals("Viettel")) {
 				System.out.println(x);
 				wifi.switchToSpecificNetwork("Viettel", "");
 				try {
