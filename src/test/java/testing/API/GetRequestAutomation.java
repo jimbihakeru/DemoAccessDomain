@@ -158,7 +158,7 @@ public class GetRequestAutomation {
 
 			// To check page ready state.
 		else {
-			bot.sendMsg(url + "    ------ KHÔNG LOAD ĐƯỢC TRANG ");
+			bot.sendMsg(driver.getCurrentUrl() + "    ------ KHÔNG LOAD ĐƯỢC TRANG ");
 			return;
 		}
 		
