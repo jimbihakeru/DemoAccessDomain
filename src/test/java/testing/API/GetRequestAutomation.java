@@ -116,7 +116,7 @@ public class GetRequestAutomation {
 					Thread.sleep(10000);
 					driver.navigate().to(url);
 				} catch (InterruptedException e) {
-					bot.sendMsg(driver.getCurrentUrl() + "    ------ KHÔNG LOAD ĐƯỢC TRANG ");
+					bot.sendMsg(url + "    ------ KHÔNG LOAD ĐƯỢC TRANG ");
 					return;
 				}
 				
