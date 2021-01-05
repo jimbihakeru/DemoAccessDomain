@@ -156,7 +156,7 @@ public class GetRequestAutomation {
 			// To check page ready state.
 			if (js.executeScript("return document.readyState").toString().equals("complete")) {
 				System.out.println("Access Failed");
-				bot.sendMsg(driver.getCurrentUrl() + "    ------ KHÔNG LOAD ĐƯỢC TRANG ";
+				bot.sendMsg(driver.getCurrentUrl() + "    ------ KHÔNG LOAD ĐƯỢC TRANG ");
 			}
 		}
 		
