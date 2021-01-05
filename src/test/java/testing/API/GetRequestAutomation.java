@@ -112,8 +112,15 @@ public class GetRequestAutomation {
 				driver = new ChromeDriver(cap);
 				driver.manage().window().maximize();
 				String url = prop.getProperty("url" + i);
-				driver.navigate().to(url);
-				Thread.sleep(10000);
+				try {
+					Thread.sleep(10000);
+					driver.navigate().to(url);
+				} catch (InterruptedException e) {
+					bot.sendMsg(driver.getCurrentUrl() + "    ------ KHÔNG LOAD ĐƯỢC TRANG ");
+					return;
+				}
+				
+				
 				//checkPageIsReady();
 				//test = extent.createTest(url);
 				if (driver.findElements(By.xpath(IDElement)).size() != 0) {
