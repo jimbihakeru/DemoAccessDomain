@@ -147,15 +147,17 @@ public class GetRequestAutomation {
 		// This loop will iterate for 25 times to check If page Is ready after
 		// every 1 second.
 		// If the page loaded successfully, it will terminate the for loop
-		for (int i = 0; i < 25; i++) {
+		for (int i = 0; i < 5; i++) {
 			try {
-				Thread.sleep(1000);
+				Thread.sleep(5000);
 			} catch (InterruptedException e) {
 			}
 
 			// To check page ready state.
 			if (js.executeScript("return document.readyState").toString().equals("complete")) {
-				break;
+				test.log(Status.FAIL, url + "------ KHÔNG LOAD ĐƯỢC TRANG ");
+				System.out.println("Access Failed");
+				bot.sendMsg(driver.getCurrentUrl() + "    ------ KHÔNG LOAD ĐƯỢC TRANG ";
 			}
 		}
 		
