@@ -112,7 +112,7 @@ public class GetRequestAutomation {
 				driver = new ChromeDriver(cap);
 				driver.manage().window().maximize();
 				String url = prop.getProperty("url" + i);
-				driver.get(url);
+				driver.navigate().to(url);
 				Thread.sleep(10000);
 				//checkPageIsReady();
 				//test = extent.createTest(url);
