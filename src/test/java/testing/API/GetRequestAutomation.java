@@ -115,15 +115,15 @@ public class GetRequestAutomation {
 				driver.get(url);
 				Thread.sleep(10000);
 				//checkPageIsReady();
-				test = extent.createTest(url);
+				//test = extent.createTest(url);
 				if (driver.findElements(By.xpath(IDElement)).size() != 0) {
-					test.log(Status.PASS, url + "----- Access OK");
+					//test.log(Status.PASS, url + "----- Access OK");
 					System.out.println(driver.getCurrentUrl() + "    ------ Access Success on " + x.toUpperCase());
 				} else if (driver.findElements(By.xpath(ClassElement)).size() != 0) {
-					test.log(Status.PASS, url + "----- Access OK");
+					//test.log(Status.PASS, url + "----- Access OK");
 					System.out.println(driver.getCurrentUrl() + "    ------ Access Success on " + x.toUpperCase());
 				} else {
-					test.log(Status.FAIL, url + "------ Access failed on " + x.toUpperCase());
+					//test.log(Status.FAIL, url + "------ Access failed on " + x.toUpperCase());
 					System.out.println("Access Failed");
 					bot.sendMsg(driver.getCurrentUrl() + "    ------ Access Failed on " + x.toUpperCase());
 				}
