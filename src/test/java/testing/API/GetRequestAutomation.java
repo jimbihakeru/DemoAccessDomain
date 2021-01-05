@@ -121,7 +121,7 @@ public class GetRequestAutomation {
 				}
 				
 				
-				//checkPageIsReady();
+				checkPageIsReady();
 				//test = extent.createTest(url);
 				if (driver.findElements(By.xpath(IDElement)).size() != 0) {
 					//test.log(Status.PASS, url + "----- Access OK");
@@ -158,7 +158,7 @@ public class GetRequestAutomation {
 
 			// To check page ready state.
 		else {
-			bot.sendMsg(driver.getCurrentUrl() + "    ------ KHÔNG LOAD ĐƯỢC TRANG ");
+			bot.sendMsg(url + "    ------ KHÔNG LOAD ĐƯỢC TRANG ");
 			return;
 		}
 		
