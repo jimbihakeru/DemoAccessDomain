@@ -113,6 +113,7 @@ public class GetRequestAutomation {
 				driver.manage().window().maximize();
 				String url = prop.getProperty("url" + i);
 				driver.get(url);
+				Thread.sleep(10000);
 				checkPageIsReady();
 				test = extent.createTest(url);
 				if (driver.findElements(By.xpath(IDElement)).size() != 0) {
@@ -147,17 +148,11 @@ public class GetRequestAutomation {
 		// This loop will iterate for 25 times to check If page Is ready after
 		// every 1 second.
 		// If the page loaded successfully, it will terminate the for loop
-		for (int i = 0; i < 5; i++) {
-			try {
-				Thread.sleep(5000);
-			} catch (InterruptedException e) {
-			}
 
 			// To check page ready state.
-			if (js.executeScript("return document.readyState").toString().equals("complete")) {
-				System.out.println("Access Failed");
-				bot.sendMsg(driver.getCurrentUrl() + "    ------ KHÔNG LOAD ĐƯỢC TRANG ");
-			}
+		else {
+			bot.sendMsg(driver.getCurrentUrl() + "    ------ KHÔNG LOAD ĐƯỢC TRANG ");
+			return;
 		}
 		
 	}
